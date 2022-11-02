@@ -26,3 +26,11 @@ ol {
     margin: 0;
     padding-left: 0;
 }
+
+img, svg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    // Тимчасова річ
+    height: auto;
+}

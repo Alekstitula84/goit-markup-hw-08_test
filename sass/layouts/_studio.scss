@@ -9,7 +9,17 @@
 
 .studio {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+       }
+
+.studio__item {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2); }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 90px) / 4);
+        }
 }
 
 .studio__icon {
@@ -17,7 +27,7 @@
 }
 
 .studio__text {
-    max-width: 270px;
+    // max-width: 270px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;

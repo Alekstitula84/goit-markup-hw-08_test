@@ -1,0 +1,45 @@
+
+.examples--section {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+
+
+.work-examp {
+  display: flex;
+  gap: 30px;
+}
+
+.work-examp__item {
+  position: relative;
+  width: calc((100% - 60px) / 3);
+  &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      min-height: 70px;
+      bottom: 0%;
+      background-color: var(--work-examp-before-background);
+    }
+}
+
+
+
+.work-examp__img {
+  display: block;
+}
+
+.work-examp__text {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-title-color);
+  padding-bottom: 27px;
+}

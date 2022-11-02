@@ -1,0 +1,51 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+    background: #ffffff;
+}
+
+
+
+.logo,
+.accent {
+    text-decoration: none;
+}
+
+input,
+textarea {
+    outline: transparent;
+}
+
+.top__title {
+    @include font (700, 36px, 1.16, 0.03em);
+}
+
+.top__title--position {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.social__link {
+    transition: color var(--transition-duration), fill var(--transition-duration),
+        background-color var(--transition-duration);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(175, 177, 184, 1);
+
+    &:hover,
+    &:focus {
+        background-color: rgba(33, 150, 243, 1);
+        color: var(--hero-title-color);
+    }
+}

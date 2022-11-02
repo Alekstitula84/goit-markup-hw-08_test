@@ -1,0 +1,26 @@
+.customers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.customers__link {
+    display: flex;
+    transition: color var(--transition-duration),
+        border var(--transition-duration);
+    color: var(--customer-link-color);
+    border: 1px solid var(--customer-link-color);
+    border-radius: 3.5px;
+    &:hover,
+    &:focus {
+            color: var(--text-nav-link-hover-color);
+            border: 1px solid var(--text-nav-link-hover-color);
+        }
+}
+
+.customers__icon {
+    fill: currentColor;
+}
+

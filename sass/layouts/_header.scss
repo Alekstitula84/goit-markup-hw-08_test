@@ -1,0 +1,134 @@
+.header {
+    border-bottom: 1px solid var(--header-border_bottom-color);
+}
+
+.header__container {
+    display: flex;
+}
+
+.site__nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    font-family: "Raleway"; 
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--text-nav-link-hover-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo__part {
+    display: inline-block;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+   }
+
+.logo__part--dark {
+    display: inline-block;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    margin-right: 93px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu__link {
+    position: relative;
+    transition: color var(--transition-duration);
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--text-nav-link-color);
+}
+
+.menu__link.current::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--text-nav-link-hover-color);
+    &:hover,
+    &:focus {
+            color: var(--text-nav-link-hover-color);
+        }
+}
+
+
+
+.menu__link.current {
+    color: var(--text-nav-link-hover-color);
+}
+
+/* contacts */
+
+
+
+
+.contacts {
+    display: flex;
+    align-items: center;
+    
+}
+.contacts--pos {
+margin-left: auto;
+}
+
+.contacts__item+.contacts__item {
+    margin-left: 50px;
+}
+
+.contacts__link {
+    transition: color var(--transition-duration);
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--auth-link-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &:hover,
+    &:focus {
+            color: var(--text-nav-link-hover-color);
+        }
+}
+
+.contacts__icon {
+    fill: currentColor;
+}
+.contacts__icon {
+    margin-right: 10px;
+}
+

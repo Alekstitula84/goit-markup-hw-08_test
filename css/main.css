@@ -27,7 +27,7 @@ ol {
   padding-left: 0;
 }
 
-img, svg {
+img {
   display: block;
   width: 100%;
   max-width: 100%;
@@ -472,16 +472,31 @@ textarea {
   background: var(--team-background-color);
 }
 
-.team__container {
+.brigade {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 428px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .brigade__item {
+  width: 100%;
   background-color: var(--hero-title-color);
-  width: calc((100% - 90px) / 4);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .brigade__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .brigade__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .brigade__foto {
@@ -495,19 +510,6 @@ textarea {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
-}
-
-.brigade {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-}
-
-.brigade__item {
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 
 .brigade__pos {

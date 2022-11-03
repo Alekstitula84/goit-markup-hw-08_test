@@ -534,6 +534,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -541,6 +543,20 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+}
+
+.customers__item {
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .customers__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .customers__link {
@@ -572,10 +588,21 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 70px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+.kontakty__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .logo__part--light {
@@ -588,6 +615,15 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--hero-title-color);
   margin-bottom: 20px;
+}
+
+.company-data__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .company-data__adres {
@@ -1029,8 +1065,41 @@ textarea {
   cursor: pointer;
 }
 
-.filters-btn {
-  display: inline-block;
+.filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filters {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filters-item {
+    width: calc((100% - 16px) / 3);
+  }
+}
+
+.filters__btn {
+  display: block;
   -webkit-transition: background-color var(--transition-duration), color var(--transition-duration), -webkit-box-shadow var(--transition-duration);
   transition: background-color var(--transition-duration), color var(--transition-duration), -webkit-box-shadow var(--transition-duration);
   transition: background-color var(--transition-duration), color var(--transition-duration), box-shadow var(--transition-duration);
@@ -1047,23 +1116,13 @@ textarea {
   border-radius: 4px;
   padding: 6px 22px;
   border: transparent;
+  margin: 0;
 }
-.filters-btn:hover, .filters-btn:focus {
+.filters__btn:hover, .filters__btn:focus {
   color: var(--hero-title-color);
   background-color: var(--text-nav-link-hover-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.filters-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
 }
 
 .img-list {
@@ -1073,6 +1132,26 @@ textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .img-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .img-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+.img-item:hover .img-top-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .filters-img {
@@ -1127,15 +1206,6 @@ textarea {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--auth-link-color);
-}
-
-.img-item {
-  -ms-flex-preferred-size: calc(33.3333333333% - 60px);
-      flex-basis: calc(33.3333333333% - 60px);
-}
-.img-item:hover .img-top-text {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 
 .img-link {

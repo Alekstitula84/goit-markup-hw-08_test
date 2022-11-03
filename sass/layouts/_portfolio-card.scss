@@ -2,6 +2,25 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-item {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+        }
+
+    
+    &:hover .img-top-text {
+        transform: translateY(0);
+    }
 }
 
 .filters-img {
@@ -56,12 +75,7 @@
     color: var(--auth-link-color);
 }
 
-.img-item {
-    flex-basis: calc(100% / 3 - 60px);
-    &:hover .img-top-text {
-            transform: translateY(0);
-        }
-}
+
 
 .img-link {
     transition: box-shadow var(--transition-duration);

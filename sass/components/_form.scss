@@ -1,6 +1,12 @@
 .footer-form {
+    width: 100%;
+    @media screen and (min-width: 768px) 
+    {width: 450px;}
     display: flex;
-    gap: 12px;
+    // gap: 12px;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer-form-field {
@@ -10,6 +16,9 @@
 }
 
 .footer-form-text {
+    @media screen and (max-width: 1199px) {
+            text-align: center;
+        }
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -19,16 +28,18 @@
 }
 
 .footer-form-label {
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
 }
 
 .footer-form-input {
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    min-width: 358px;
+    // min-width: 358px;
     color: var(--hero-title-color);
     padding-left: 16px;
     padding-top: 15px;
@@ -52,13 +63,14 @@
 // }
 
 .footer-form-btn {
+    width: 100%;
     position: relative;
     top: 0;
     left: 0;
 }
 
 .footer-btn {
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     display: flex;
     gap: 10px;
@@ -75,4 +87,5 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    margin: 0 auto;
 }

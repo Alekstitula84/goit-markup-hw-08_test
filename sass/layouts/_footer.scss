@@ -6,13 +6,20 @@
 
 .footer__container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    // gap: 70px;
-    gap: 60px;
-    align-items: baseline;
-   
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 60px;
+        }
+    @media screen and (min-width: 768px) {
+    gap: 165px;}
     
+    align-items: baseline;
+    margin-bottom: 60px;
+}
+
+
+.kontakty {
+    width: 100%;
 }
 
 .kontakty__logo {
@@ -80,6 +87,7 @@
 
 .soc__title {
     display: block;
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -91,9 +99,9 @@
 
 
 .soc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+
+
 }
 
 

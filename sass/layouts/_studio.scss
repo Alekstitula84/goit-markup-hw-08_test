@@ -5,12 +5,16 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+        @media screen and (max-width: 767px) {
+        text-align: center;
+        }
 }
 
 .studio {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+   
        }
 
 .studio__item {
@@ -23,11 +27,17 @@
 }
 
 .studio__icon {
+    @media screen and (max-width: 1199px)
+    {display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;}
     margin-bottom: 30px;
 }
 
 .studio__text {
     // max-width: 270px;
+    display: block;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;

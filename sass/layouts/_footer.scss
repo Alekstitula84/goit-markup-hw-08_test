@@ -4,6 +4,13 @@
     background: var(--hero-bacground-color);
 }
 
+.footer__desktop
+{
+    @media screen and (min-width: 1200px) {
+        display: flex;}
+
+}
+
 .footer__container {
     display: flex;
     @media screen and (max-width: 767px) {
@@ -12,6 +19,9 @@
         }
     @media screen and (min-width: 768px) {
     gap: 165px;}
+    @media screen and (min-width: 1200px) {
+        gap: 70px;
+        }
     
     align-items: baseline;
     margin-bottom: 60px;
@@ -20,11 +30,18 @@
 
 .kontakty {
     width: 100%;
+    @media screen and (min-width: 1200px)
+    {width: 231px;
+        
+    }
 }
 
 .kontakty__logo {
-    display: flex;
-    justify-content: center;
+    
+    @media screen and (max-width: 1200px)
+    {display: flex;
+        justify-content: center;}
+    
 }
 
 
@@ -100,8 +117,10 @@
 
 .soc {
     width: 100%;
-
-
+    @media screen and (min-width: 1200px) {
+            width: 206px;
+    
+        }
 }
 
 
